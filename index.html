@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Http Requests & JavaScript</title>
-  <link rel="stylesheet" href="app.css">
-  <script src="xhr.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./xhr.js" defer></script>
+    <link rel="stylesheet" href="./app.css">
+    <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+/>
+    <title>Document</title>
 </head>
 <body>
-  <section id="control-center">
-    <button id="get-btn">GET Data</button>
-    <button id="post-btn">POST Data</button>
-  </section>
+  <form class="wrapper" autocomplete="off">
+    <input type="text" name="id" placeholder="id" required />
+    <input type="text" name="title" placeholder="title" required />
+    <input
+      type="text"
+      name="createdAt"
+      placeholder="createdAt"
+      required
+    />
+    <input type="text" name="image" placeholder="URL image" required />
+    <input type="text" name="content" placeholder="content"/>
+    <button type="submit" class="form-submit">POST</button>
+  </form>
+  <div class="wrap">
+    <table class="head">
+      <tbody>
+        <tr>
+          <td>ID</td>
+          <td>Title</td>
+          <td>createdAt</td>
+          <td>Image</td>
+          <td>Content</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="scroll-table">
+      <table>
+        <tbody></tbody>
+        <tbody class="tbody-scroll" id="product">
+          <!-- <tr>
+            <td>Body 1</td>
+            <td>Body 2</td>
+            <td>Body 3</td>
+            <td>Body 3</td>
+            <td>Body 3</td>
+          </tr> -->
+        </tbody>
+      </table>    
+    </div>
+    <ul class="btn-page">
+      <li class="btn-page-item btn-min">
+        <i class="fa fa-step-backward"></i>
+      </li>
+      <li class="btn-page-item btn-prev activeFilter">
+        <i class="fa fa-caret-left"></i>
+      </li>
+      <div class="number-page" id="number-page">
+        <!-- <li class="btn-page-item active">
+          <a href="#">1</a>
+        </li>
+        <li class="btn-page-item">
+          <a href="#">2</a>
+        </li>
+        <li class="btn-page-item">
+          <a href="#">3</a>
+        </li> -->
+      </div>
+      <li class="btn-page-item btn-next">
+        <i class="fa fa-caret-right"></i>
+      </li>
+      <li class="btn-page-item btn-max ">
+        <i class="fa fa-step-forward "></i>
+      </li>
+
+      <div class="page-config">
+        <input type="number" value="10" min="1" max="100" id="myInput">items/page</input>
+        <!-- <select name="" id="mySelect">
+          <option value="3">3</option>
+          <option value="6" selected>6</option>
+          <option value="9">9</option>
+          <option value="12">12</option>
+        </select> -->
+      </div>
+      <div class="total-page"></div>
+      <div class="total-item"></div>
+    </ul>
+    
+  </div>
 </body>
 </html>

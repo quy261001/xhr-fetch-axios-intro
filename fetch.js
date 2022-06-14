@@ -1,9 +1,9 @@
-const getBtn = document.getElementById('get-btn');
-const postBtn = document.getElementById('post-btn');
+// const getBtn = document.getElementById('get-btn');
+// const postBtn = document.getElementById('post-btn');
 
-const getData = () => {};
+// const getData = () => {};
 
-const sendData = () => {};
+// const sendData = () => {};
 
-getBtn.addEventListener('click', getData);
-postBtn.addEventListener('click', sendData);
+// getBtn.addEventListener('click', getData);
+// postBtn.addEventListener('click', sendData);
